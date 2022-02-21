@@ -127,3 +127,8 @@ Null Authentication
 ```
 smbclient -N -L //10.129.70.254
 ```
+
+## Post Exploitation
+
+### Downloading and Transferring Files
+
