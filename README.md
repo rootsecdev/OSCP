@@ -132,3 +132,11 @@ smbclient -N -L //10.129.70.254
 
 ### Downloading and Transferring Files
 
+Certutil:
+
+```
+certutil.exe -urlcache -split -f http://7-zip.org/a/7z1604-x64.exe 7zip.exe
+```
+
+PowerShell:
+
