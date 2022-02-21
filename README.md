@@ -95,3 +95,21 @@ snmpwalk -c public -v2c 10.129.213.210
 ```
 snmp-check 10.129.213.210
 ```
+
+### Pentesting SMB
+
+```
+crackmapexec smb 10.129.70.254 
+```
+
+Detect anonymous shares that are open
+
+```
+smbclient -L //10.129.70.254
+```
+
+Null Authentication
+
+```
+smbclient -N -L //10.129.70.254
+```
