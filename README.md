@@ -7,11 +7,7 @@ OSCP Study Guide
 
 
 
-### subdomain enumeration
 
-```
-dig axfr @10.10.10.13 cronos.htb
-```
 
 ### Web Enumeration
 
