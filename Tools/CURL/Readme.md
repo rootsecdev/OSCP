@@ -15,9 +15,20 @@ Usage: curl [options...] <url>
  -A, --user-agent <name>    Send User-Agent <name> to server
  -v, --verbose              Make the operation more talkative
  -V, --version              Show version number and quit
+ -X, --request             Specifies a custom request method to use when communicating with the HTTP server
  ```
  
  Inspect headers and output (This can give clues on running software:
  ```
  curl -i http://192.168.208.97/
+ ```
+ 
+ Target Post method to URL:
+ ```
+ curl -X POST http://192.168.120.99:33333/list-running-procs
+ ```
+ 
+ If something requires content length in body of post:
+ ```
+ curl -d "" -X POST http://192.168.120.99:33333/list-running-procs
  ```
