@@ -5,3 +5,9 @@ Hunting for domains and subdomain using dig. DNS is required to be running on th
 ```
 dig axfr @10.10.10.13 cronos.htb
 ```
+
+You can also hunt for subdomains with fuff. Example with filtering http resonse size:
+
+```
+ffuf -u http://domain.local -c -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt -H 'Host: FUZZ.domain.local' -fs 0 -fs 65
+```
