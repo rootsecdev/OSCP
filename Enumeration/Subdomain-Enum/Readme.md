@@ -11,3 +11,16 @@ You can also hunt for subdomains with fuff. Example with filtering http resonse 
 ```
 ffuf -u http://domain.local -c -w /usr/share/seclists/Discovery/DNS/subdomains-top1million-5000.txt -H 'Host: FUZZ.domain.local' -fs 0 -fs 65
 ```
+
+
+## Websites for subdomain enum
+
+Certsh
+```
+https://crt.sh/
+```
+
+Certificate Transparance Tool:
+```
+https://ui.ctsearch.entrust.com/ui/ctsearchui
+```
