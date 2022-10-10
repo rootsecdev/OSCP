@@ -22,6 +22,16 @@ Sublist3r example:
 ./sublist3r.py -d acmeitsupport.thm
 ```
 
+Using ffuf
+```
+ffuf -w /usr/share/seclists/Discovery/DNS/namelist.txt -H "Host: FUZZ.acmeitsupport.thm" -u http://10.10.28.190
+```
+
+If you get a bunch of 200 status back use the filter size switch
+```
+ffuf -w /usr/share/seclists/Discovery/DNS/namelist.txt -H "Host: FUZZ.acmeitsupport.thm" -u http://10.10.28.190 -fs 2395
+```
+
 ## Websites for subdomain enum
 
 Certsh
